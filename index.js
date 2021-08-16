@@ -28,11 +28,18 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+
+  counter1 is contained in one fuction - counter2 has its count variable set on a global scale
   
   2. Which of the two uses a closure? How can you tell?
+
+  counter2 - the function goes outside of itself to pull count variable
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+    counter2 is only preferrable if we need to access count globally
+    counter1 is preferable in all other applications
 */
 
 // counter1 code
@@ -45,7 +52,7 @@ function counterMaker() {
 
 const counter1 = counterMaker();
 
-// counter2 code - only preferrable if we need to acces globally
+// counter2 code 
 let count = 0;
 
 function counter2() {
@@ -62,8 +69,9 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+  let score = Math.floor(Math.random() * 2)
+  return score;
 }
 
 
@@ -81,7 +89,17 @@ Use the finalScore function below to do the following:
 }
 */ 
 // parameters inningcb, number 
-function finalScore(/*code Here*/){
+function finalScore(inningcb, number){
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i = 0; i < number; i++){
+    homeScore = homeScore + inningcb();
+    awayScore = awayScore + inningcb();
+  }
+  return{
+    Home: homeScore,
+    Away: awayScore
+  };
   /*Code Here*/
 }
 
@@ -138,8 +156,15 @@ Use the scoreboard function below to do the following:
 ]  
   */
 //getinningscorecb, scorecb, number
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inningScorecb, inningcb, inningsNumber) {
+  const gameTotal = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i = 0; i < inningsNumber; i++){
+    homeScore = homeScore + 0;
+    awayScore = awayScore + 0;
+
+  }
 }
 
 
