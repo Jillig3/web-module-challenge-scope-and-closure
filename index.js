@@ -45,7 +45,7 @@ function counterMaker() {
 
 const counter1 = counterMaker();
 
-// counter2 code
+// counter2 code - only preferrable if we need to acces globally
 let count = 0;
 
 function counter2() {
@@ -80,7 +80,7 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-
+// parameters inningcb, number 
 function finalScore(/*code Here*/){
   /*Code Here*/
 }
@@ -90,6 +90,8 @@ Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
+  // inningcb
+  // returning an object with a score for home and away
 function getInningScore(/*Your Code Here */) {
   /*Your Code Here */
 }
@@ -135,7 +137,7 @@ Use the scoreboard function below to do the following:
   "This game will require extra innings: Away 10 - Home 10"
 ]  
   */
-
+//getinningscorecb, scorecb, number
 function scoreboard(/* CODE HERE */) {
   /* CODE HERE */
 }
