@@ -110,9 +110,14 @@ Use the getInningScore() function below to do the following:
 
   // inningcb
   // returning an object with a score for home and away
-function getInningScore(/*Your Code Here */) {
+function getInningScore(inningcb) {
+  return {
+    Home: inningcb(),
+    Away: inningcb()
+  }
   /*Your Code Here */
 }
+
 
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
@@ -160,13 +165,21 @@ function scoreboard(inningScorecb, inningcb, inningsNumber) {
   const gameTotal = [];
   let homeScore = 0;
   let awayScore = 0;
+  
   for(let i = 0; i < inningsNumber; i++){
-    homeScore = homeScore + 0;
-    awayScore = awayScore + 0;
-
+    homeScore = homeScore + currentScore.Home;
+    awayScore = awayScore + currentScore.Away;
+    score.push(`inning ${i + 1}: Away ${currentScore.Away} - Home: ${currentScore.Home}`);
   }
-}
 
+if(homeScore === awayScore){
+  score.push(`This game will require extra innings: Away: ${currentScore.Away} - Home: ${currentScore.Home}`)
+}
+else{
+  score.push(`Final Score: Away: ${currentScore.Away} - Home: ${currentScore.Home}`)
+}
+return score;
+}
 
 
 
