@@ -9,7 +9,12 @@ The module challenge is the afternoon project or assignment that students work t
 ## Objectives
 
 - Explain function scope
-- Describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript  
+
+Scope determines the accessibility of variables.
+
+- Describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript 
+
+Closure is when nested elements reach up into parent elements to grab a variable. Information can be passed down to nested elements but not up into parent elements.
 
 ## Introduction
 
@@ -59,6 +64,9 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure is when nested elements reach up into parent elements to grab a variable. Information can be passed down to nested elements but not up into parent elements.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +88,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+when the constants outside of the function are used to give the variable 'name' meaning.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+dansRoll will always have "Dan" for the name (unless we change it) the number for the roll itself will change based on what "newRoll" rolls.
+
 c. What is the lexical scope of `newRoll`? 
+
+newRolls lexical scope is only in the function that it lives in currently.
 
 
 ### Task 3 - Stretch Goals
